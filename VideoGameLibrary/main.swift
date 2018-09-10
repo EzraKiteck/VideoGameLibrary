@@ -8,12 +8,18 @@
 
 import Foundation
 
-print("Hello, World!")
-
 var gameList: [Game] = []
 
-let superMarioBros = Game(title: "Super Mario Bros." genre: "Action/Platformer", description: "Jump, run, and WAHOO your way through worlds filled with mushrooms and turts and blocks!")
+let superMarioBros = Game(title: "Super Mario Bros.", genre: "Action/Platformer", description: "Run, jump, and WAHOO your way through worlds filled with mushrooms and turts and blocks!")
 
 gameList.append(superMarioBros)
 
-let legendOfZelda = Game(title: "The Legend of Zelda", genre: "Action/Adventure", description: "Save the princess from an angry pig man ")
+let legendOfZelda = Game(title: "The Legend of Zelda", genre: "Action/Adventure", description: "Save the princess from an angry pig man using a little sword, a flute, and a whole lot of fairies.")
+
+gameList.append(legendOfZelda)
+
+for item in gameList {
+    print("\(item.title): \(item.description)")
+}
+
+print("")
