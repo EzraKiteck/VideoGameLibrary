@@ -8,17 +8,20 @@
 
 import Foundation
 
+enum ESRBRating {
+    case E
+    case T
+    case M
+}
+
 class Game {
     
+    //Properties
     let title: String
-    let genre: String
-    let description: String
     var checkedIn: Bool = true
     var dueDate: Date? = nil
     
-    init(title: String, genre: String, description: String) {
+    init(title: String) {
         self.title = title
-        self.genre = genre
-        self.description = description
     }
 }

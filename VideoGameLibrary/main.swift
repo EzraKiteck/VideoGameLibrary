@@ -8,18 +8,19 @@
 
 import Foundation
 
+print("""
+                    Welcome!
+""")
+
 var gameList: [Game] = []
 
-let superMarioBros = Game(title: "Super Mario Bros.", genre: "Action/Platformer", description: "Run, jump, and WAHOO your way through worlds filled with mushrooms and turts and blocks!")
-
+let superMarioBros = Game(title: "Super Mario Bros.")
 gameList.append(superMarioBros)
 
-let legendOfZelda = Game(title: "The Legend of Zelda", genre: "Action/Adventure", description: "Save the princess from an angry pig man using a little sword, a flute, and a whole lot of fairies.")
-
+let legendOfZelda = Game(title: "The Legend of Zelda")
 gameList.append(legendOfZelda)
 
-for item in gameList {
-    print("\(item.title): \(item.description)")
-}
 
-print("")
+let mainMenu = Menu(gameList: gameList)
+
+mainMenu.go()
